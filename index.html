@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML & CSS Presentation Flashcards – Aniket</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #18122B;
+            margin: 0;
+            padding: 0;
+            color: #F8F6FB;
+        }
+
+        header {
+            background: linear-gradient(90deg, #44318D 0%, #6D28D9 100%);
+            color: #F8F6FB;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            box-shadow: 0 2px 16px rgba(68, 49, 141, 0.25);
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: #231942;
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 16px rgba(109, 40, 217, 0.18);
+            margin-bottom: 2rem;
+            padding: 1.5rem 1.2rem;
+            transition: box-shadow 0.2s;
+            position: relative;
+            border-left: 5px solid #A259F7;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(162, 89, 247, 0.25);
+        }
+
+        .slide-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            color: #FEC7D7;
+        }
+
+        /* Section color accents */
+        .slide-section-intro {
+            border-left: 5px solid #A259F7;
+        }
+
+        .slide-section-internet {
+            border-left: 5px solid #FEC7D7;
+        }
+
+        .slide-section-browsers {
+            border-left: 5px solid #F875AA;
+        }
+
+        .slide-section-howmade {
+            border-left: 5px solid #BE6DB7;
+        }
+
+        .slide-section-html {
+            border-left: 5px solid #A259F7;
+        }
+
+        .slide-section-tags {
+            border-left: 5px solid #F875AA;
+        }
+
+        .slide-section-starter {
+            border-left: 5px solid #FEC7D7;
+        }
+
+        .slide-section-output {
+            border-left: 5px solid #BE6DB7;
+        }
+
+        .slide-section-motivation {
+            border-left: 5px solid #A259F7;
+        }
+
+        .slide-section-quiz {
+            border-left: 5px solid #F875AA;
+        }
+
+        .slide-section-summary {
+            border-left: 5px solid #FEC7D7;
+        }
+
+        .slide-section-thankyou {
+            border-left: 5px solid #A259F7;
+        }
+
+        .what-to-say {
+            margin: 0.7em 0 0.5em 0;
+            font-size: 1.07em;
+            line-height: 1.7;
+            color: #F8F6FB;
+        }
+
+        .analogy,
+        .presenter-tip,
+        .tone-tip,
+        .punchline {
+            background: #372554;
+            border-left: 4px solid #A259F7;
+            padding: 0.6em 1em;
+            margin: 0.7em 0;
+            border-radius: 0.6em;
+            font-size: 0.98em;
+            font-style: italic;
+            color: #FEC7D7;
+        }
+
+        .analogy {
+            border-color: #F875AA;
+        }
+
+        .presenter-tip {
+            border-color: #BE6DB7;
+        }
+
+        .tone-tip {
+            border-color: #FEC7D7;
+        }
+
+        .punchline {
+            border-color: #A259F7;
+            font-weight: 600;
+        }
+
+        ul,
+        ol {
+            margin: 0.7em 0 0.7em 1.2em;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.4em;
+            font-size: 1em;
+        }
+
+        code {
+            background: #372554;
+            color: #F875AA;
+            border-radius: 0.3em;
+            padding: 0.1em 0.4em;
+            font-size: 0.97em;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 1.1rem;
+            right: 1.2rem;
+            font-size: 0.95em;
+            color: #A259F7;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+
+            .container {
+                padding: 0 0.2rem;
+            }
+
+            .card {
+                padding: 1.1rem 0.7rem;
+            }
+
+            .slide-title {
+                font-size: 1.07rem;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #18122B;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #372554;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🎤 HTML &amp; CSS Presentation Rehearsal Flashcards – Aniket</h1>
+        <p>Your speaker notes, explanations, analogies, and tips for a smooth, engaging delivery.</p>
+    </header>
+    <main class="container">
+
+        <section class="card slide-section-intro">
+            <span class="slide-number">Slide 1</span>
+            <div class="slide-title">🧭 Introduction – “Building the Web: Your First Steps into HTML &amp; CSS” 🚀</div>
+            <div class="what-to-say">
+                "Hi everyone! 👋 Today, I’m going to take you on a journey — a beginner-friendly adventure into the
+                world of websites, coding, and creativity.<br>
+                Have you ever used websites like YouTube, Wikipedia, or played games online and wondered: <em>'How are
+                    these built?'</em><br>
+                Well, today we’re going to learn how those websites are created — using just two tools: HTML and CSS."
+            </div>
+            <div class="tone-tip"><b>Tone Tip:</b> Be friendly, confident, and energetic.</div>
+        </section>
+
+        <section class="card slide-section-internet">
+            <span class="slide-number">Slide 2</span>
+            <div class="slide-title">🌐 What is the Internet?</div>
+            <div class="what-to-say">
+                "Before we build a website, let’s quickly understand the platform we build <em>on</em> — the
+                internet!<br>
+                Think of it like a giant invisible <b>information highway</b> that connects billions of computers and
+                mobile phones worldwide.<br>
+                It lets us share data, browse websites, play games, send messages — all thanks to this magical global
+                connection."
+            </div>
+            <div class="analogy">Analogy: “The Internet is like the world’s biggest library, and every website is a book
+                in it.”</div>
+        </section>
+
+        <section class="card slide-section-browsers">
+            <span class="slide-number">Slide 3</span>
+            <div class="slide-title">🧭 Web Browsers &amp; Websites</div>
+            <div class="what-to-say">
+                "Now, how do we access this ‘library’? Through <b>web browsers</b> like Chrome, Firefox, or Safari.<br>
+                These browsers are our windows into the internet — and they help us view <b>websites</b>.<br>
+                A website is just a collection of digital pages — just like a book has chapters. And each page can show
+                text, images, videos, and more."
+            </div>
+        </section>
+
+        <section class="card slide-section-howmade">
+            <span class="slide-number">Slide 4</span>
+            <div class="slide-title">💬 How are Websites Made?</div>
+            <div class="what-to-say">
+                "So… how are these digital pages built? 🤔<br>
+                They’re created using <b>HTML and CSS</b> — two simple languages that every browser understands.<br>
+                We’ll first learn HTML, which handles the structure, and then CSS, which makes things look beautiful."
+            </div>
+            <div class="presenter-tip"><b>Presenter Tip:</b> Pause here for 1–2 seconds to build curiosity.</div>
+        </section>
+
+        <section class="card slide-section-html">
+            <span class="slide-number">Slide 5</span>
+            <div class="slide-title">🦴 HTML – The Skeleton of the Web</div>
+            <div class="what-to-say">
+                "HTML stands for <b>HyperText Markup Language</b>.<br>
+                It was invented by a scientist named <b>Tim Berners-Lee</b> in the early 1990s to help scientists share
+                information online.<br>
+                Think of HTML as the <b>skeleton</b> of a website.<br>
+                It gives your content structure — just like our bones give our body shape. Without HTML, a web page
+                would have no headings, images, or text blocks."
+            </div>
+        </section>
+
+        <section class="card slide-section-tags">
+            <span class="slide-number">Slide 6</span>
+            <div class="slide-title">🔖 HTML Tags &amp; Elements</div>
+            <div class="what-to-say">
+                "In HTML, we use <b>tags</b> to tell the browser what each part of the content is.<br>
+                There are two types of tags:"
+                <ol>
+                    <li><b>Paired tags</b> – These come in an opening and closing form like
+                        <code>&lt;p&gt;...&lt;/p&gt;</code>
+                    </li>
+                    <li><b>Self-closing tags</b> – These don’t wrap anything and end on their own like
+                        <code>&lt;img /&gt;</code>
+                    </li>
+                </ol>
+                You can think of tags as <b>boxes</b> – you label them to describe what’s inside."
+            </div>
+            <div class="analogy">Analogy: "Like putting a label on a lunchbox: <code>&lt;p&gt;</code> for paragraph,
+                <code>&lt;img&gt;</code> for image."
+            </div>
+        </section>
+
+        <section class="card slide-section-starter">
+            <span class="slide-number">Slide 7</span>
+            <div class="slide-title">🎒 HTML Starter Pack – Common Tags</div>
+            <div class="what-to-say">
+                "Let’s look at some must-know HTML tags:"
+                <ul>
+                    <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings — like title sizes.</li>
+                    <li><code>&lt;p&gt;</code> for paragraphs.</li>
+                    <li><code>&lt;div&gt;</code> to group sections of your page.</li>
+                    <li><code>&lt;span&gt;</code> for smaller inline items.</li>
+                </ul>
+                These are your basic tools — with just these, you can create an entire basic web page layout!"
+            </div>
+        </section>
+
+        <section class="card slide-section-output">
+            <span class="slide-number">Slide 8</span>
+            <div class="slide-title">🖼️ HTML Tags in Action (Output Screenshot)</div>
+            <div class="what-to-say">
+                "Here’s how those tags appear on a real web page!<br>
+                This is the exact result you'd see if you typed those tags into an HTML file and opened it in a
+                browser.<br>
+                Notice how each tag creates a different visual block — <code>&lt;h1&gt;</code> is big and bold,
+                <code>&lt;p&gt;</code> is normal text, etc."
+            </div>
+        </section>
+
+        <section class="card slide-section-html">
+            <span class="slide-number">Slide 9</span>
+            <div class="slide-title">🧥 What is CSS?</div>
+            <div class="what-to-say">
+                "Now that we’ve learned HTML, let’s meet its best friend — <b>CSS</b>!<br>
+                CSS stands for <b>Cascading Style Sheets</b>, and it’s like the fashion designer of your
+                website.<br><br>
+                HTML gives the structure — like bones — and CSS is the <b>clothes and makeup</b> that make your page
+                look great.<br><br>
+                It controls colors, fonts, spacing, layout, and so much more."
+            </div>
+            <div class="analogy">Analogy: “If HTML is the skeleton, CSS is the outfit — it makes your content stylish!”
+            </div>
+        </section>
+
+        <section class="card slide-section-motivation">
+            <span class="slide-number">Slide 10</span>
+            <div class="slide-title">✨ Why Do We Need CSS?</div>
+            <div class="what-to-say">
+                "Great question! Why not just use plain HTML?<br><br>
+                Let’s break down why CSS is essential:"
+                <ul>
+                    <li>🖼️ It helps create <b>beautiful design</b>.</li>
+                    <li>🔁 Gives you a <b>consistent look</b> across all pages.</li>
+                    <li>📱 Helps make your site <b>responsive</b> – so it looks great on phones, tablets, or desktops.
+                    </li>
+                    <li>🧹 Keeps content and style separate — making websites easier to manage and update.</li>
+                </ul>
+                With CSS, one small file can style hundreds of HTML pages — that’s the power!
+            </div>
+        </section>
+
+        <section class="card slide-section-tags">
+            <span class="slide-number">Slide 11</span>
+            <div class="slide-title">🛠️ CSS Syntax – The Rules of Styling</div>
+            <div class="what-to-say">
+                "CSS uses a simple rule-based syntax:"
+                <pre style="background:#372554;color:#F875AA;padding:1em;border-radius:0.7em;overflow-x:auto;"><code>p {
+  color: blue;
+  font-size: 16px;
+}</code></pre>
+                Here’s how it works:
+                <ul>
+                    <li><code>p</code> is the <b>selector</b> – it targets all paragraph tags.</li>
+                    <li><code>color</code> and <code>font-size</code> are <b>properties</b> – the things you want to
+                        change.</li>
+                    <li><code>blue</code> and <code>16px</code> are <b>values</b> – how you want them to look.</li>
+                </ul>
+                This makes styling easy and readable.
+            </div>
+        </section>
+
+        <section class="card slide-section-starter">
+            <span class="slide-number">Slide 12</span>
+            <div class="slide-title">🔗 Types of CSS – How to Apply It</div>
+            <div class="what-to-say">
+                "There are 3 main ways to apply CSS in HTML:"
+                <ol>
+                    <li><b>Inline CSS</b> – directly in the tag:<br>
+                        <code>&lt;p style='color:blue;'&gt;Hello!&lt;/p&gt;</code>
+                    </li>
+                    <li><b>Internal CSS</b> – inside a <code>&lt;style&gt;</code> tag in the
+                        <code>&lt;head&gt;</code>:<br>
+                        <code>&lt;style&gt;<br>&nbsp;&nbsp;h1 { color: red; }<br>&lt;/style&gt;</code>
+                    </li>
+                    <li><b>External CSS</b> – link to a separate <code>.css</code> file:<br>
+                        <code>&lt;link rel='stylesheet' href='style.css' /&gt;</code>
+                    </li>
+                </ol>
+                <div class="presenter-tip"><b>Best Practice:</b> Use external CSS for real projects — it keeps things
+                    clean and organized.</div>
+            </div>
+        </section>
+
+               <section class="card slide-section-motivation">
+            <span class="slide-number">Slide 13</span>
+            <div class="slide-title">💡 Motivation Slide – Your Journey Starts Here!</div>
+            <div class="what-to-say">
+                "Just with HTML and CSS, you can build <b>your own blog</b>, a <b>portfolio</b>, or even a <b>game fan
+                    page</b>!<br>
+                This is the <b>first step to becoming a web developer</b> — someone who builds amazing things for the
+                internet.<br>
+                The best part? You don’t need expensive software. Just a simple laptop and a browser."
+            </div>
+            <div class="punchline">Punchline: “The only limit is your imagination.”</div>
+        </section>
+
+        <section class="card slide-section-quiz">
+            <span class="slide-number">Slide 14</span>
+            <div class="slide-title">❓ Mini Quiz – Test Your Skills!</div>
+            <div class="what-to-say">
+                "Alright! Let’s see how much you remember! I’ve got a few fun questions:"
+                <ol>
+                    <li>Which tag is used for images? (<code>&lt;img&gt;</code>)</li>
+                    <li>What does <code>&lt;h1&gt;</code> do?</li>
+                    <li>How do you change text color in CSS? (<code>color: red;</code>)</li>
+                    <li>What is a selector in CSS?</li>
+                </ol>
+                Try to answer, shout it out, or raise your hands!"
+            </div>
+        </section>
+
+        <section class="card slide-section-summary">
+            <span class="slide-number">Slide 15</span>
+            <div class="slide-title">🔁 Summary – What We Learned</div>
+            <div class="what-to-say">
+                "Let’s quickly recap:"
+                <ul>
+                    <li>🔹 <b>HTML</b> gives a webpage structure — like bones in the body.</li>
+                    <li>🔹 It uses <b>tags</b> like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, and
+                        <code>&lt;img&gt;</code> to organize content.
+                    </li>
+                    <li>🔹 <b>CSS</b> makes it look nice — controlling color, size, spacing, and layout.</li>
+                    <li>🔹 CSS uses <b>selectors</b> and <b>properties</b> like <code>color</code>,
+                        <code>font-size</code>.
+                    </li>
+                </ul>
+                Together, they create the websites we use every day!"
+            </div>
+        </section>
+
+        <section class="card slide-section-thankyou">
+            <span class="slide-number">Slide 16</span>
+            <div class="slide-title">🙏 Thank You – Keep Creating!</div>
+            <div class="what-to-say">
+                "Thank you so much for being an amazing audience!<br>
+                Remember — every great website started with a single line of code.<br>
+                I hope you’ll go home and try building your first web page.<br>
+                Keep creating, keep exploring — and feel free to ask me anything!"
+            </div>
+        </section>
+
+        <section class="card" style="text-align:center; background: #372554;">
+            <div style="font-size:1.1em; font-weight:600; color:#FEC7D7;">
+                🎤 You're ready, Aniket! These flashcards will keep you calm, clear, and confident!
+            </div>
+        </section>
+
+        <section class="card slide-section-thankyou">
+            <span class="slide-number">Slide 20</span>
+            <div class="slide-title">🙏 Thank You for Exploring the Web With Me!</div>
+            <div class="what-to-say">
+                "Thank you all for your attention and curiosity! 🙌<br>
+                I hope this session sparked something creative in you.<br>
+                Remember, every great developer once started with these basics — just like you did today.<br><br>
+                Feel free to ask questions — or better yet, show me what you create!"
+            </div>
+            <div class="tone-tip"><b>Close with Energy:</b> "Keep coding. Keep creating. Your first website is just the
+                beginning! 💪"</div>
+        </section>
+
+        <section class="card" style="text-align:center; background: #372554;">
+            <div style="font-size:1.1em; font-weight:600; color:#FEC7D7;">
+                🎤 You’re now fully equipped to present <i>both HTML and CSS</i> like a web wizard!
+            </div>
+        </section>
+        <!-- CSS Slides End -->
+
+    </main>
+</body>
+
+</html>
